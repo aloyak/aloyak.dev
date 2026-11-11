@@ -3,397 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="4loyak is a programmer and engineering enthusiast based in Spain." />
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/92647999?v=4" />
-    <title>4loyak!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-light.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
-    <style>
-      pre, code {
-        font-family: 'Cascadia Code', 'Cascadia Mono', monospace !important;
-      }
-    </style>
+    <title>4loyak</title>
   </head>
-  <body class="min-h-screen text-ink">
-    <div class="page-noise"></div>
-    <main class="max-w-6xl mx-auto px-6">
+  <body>
+    <header class="site-header shell">
+      <a class="wordmark" href="/" aria-label="4loyak home">4loyak<span>.</span></a>
+    </header>
 
-      <header class="my-4 flex flex-col gap-4 md:flex-row md:items-center justify-between">
-        <h1 class="text-3xl md:text-4xl title-font">
-          <a href="/">4loyak!</a>
-        </h1>
-        <div class="flex items-center gap-3">
-          <p class="text-base md:text-lg text-ink/70 font-bold">Dark?</p>
-          <label class="flex items-center gap-2 font-bold">
-            <input type="radio" class="neo-radio" name="dark-theme" id="theme-yes" />
-            <span class="text-base">Yes</span>
-          </label>
-          <label class="flex items-center gap-2 font-bold">
-            <input type="radio" class="neo-radio" name="dark-theme" id="theme-no" checked />
-            <span class="text-base">No</span>
-          </label>
+    <main class="shell">
+      <section class="profile" aria-labelledby="name">
+        <div class="avatar-wrap">
+          <img src="https://avatars.githubusercontent.com/u/92647999?v=4" alt="Portrait of 4loyak" />
         </div>
-        <nav class="flex flex-wrap gap-3 items-center text-base md:text-lg">
-          <a class="neo-btn neo-btn-success" href="#projects">Projects</a>
-          <a class="neo-btn neo-btn-info" href="#about">About</a>
-          <a class="neo-btn neo-btn-warning" href="/contact">Contact</a>
-          <a class="neo-btn neo-btn-error" href="https://github.com/aloyak">GitHub</a>
-        </nav>
-      </header>
-
-      <section class="hero">
-        <div class="hero-parallax" aria-hidden="true">
-          <div class="hero-layer layer-1"></div>
-          <div class="hero-layer layer-2"></div>
-          <div class="hero-layer layer-3"></div>
-          <div class="hero-layer layer-4"></div>
-        </div>
-        <div class="hero-inner">
-          <div class="neo-card hero-content select-none">
-            <h2 class="hero-title" aria-label="4loyak!">
-              <span class="hero-letter" style="--letter-index: 0" aria-hidden="true">4</span>
-              <span class="hero-letter" style="--letter-index: 1" aria-hidden="true">L</span>
-              <span class="hero-letter" style="--letter-index: 2" aria-hidden="true">O</span>
-              <span class="hero-letter" style="--letter-index: 3" aria-hidden="true">Y</span>
-              <span class="hero-letter" style="--letter-index: 4" aria-hidden="true">A</span>
-              <span class="hero-letter" style="--letter-index: 5" aria-hidden="true">K</span>
-              <span class="hero-letter" style="--letter-index: 6" aria-hidden="true">!</span>
-            </h2>
-            <p class="hero-subtitle font-bold">Welcome to my site! Make yourself comfortable.</p>
+        <div class="profile-copy">
+          <h1 id="name">4loyak</h1>
+          <div class="summary">
+            <p>Hey! I'm interested in tech.</p>
+            <p>I'm a self-taught graphics programmer and an aerospace engineering major. I publish many of my projects open source on GitHub, take a look at 'em!</p>
           </div>
-        </div>
-        <div class="hero-curtain" aria-hidden="true"></div>
-        <div class="absolute top-0 right-10 m-4 text-sm font-bold opacity-40">
-          <p>> Textures from <a href="https://free-game-assets.itch.io/" class="underline">craftpix.net</a></p>
+          <nav class="links" aria-label="Contact links">
+            <a href="mailto:almartdev@proton.me"><span>Email</span><span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/aloyak"><span>GitHub</span><span aria-hidden="true">↗</span></a>
+          </nav>
         </div>
       </section>
-
-      <section class="neo-card relative mt-16">
-        <h2 class="section-label bg-[#ffb84d]">Hello!</h2>
-        <div class="grid gap-8 lg:grid-cols-[2fr,1fr] mt-8">
-          <div class="space-y-5">
-            <h1 class="text-4xl md:text-5xl title-font">4loyak! (@aloyak)</h1>
-            <p class="text-xl md:text-2xl font-bold leading-relaxed max-w-xl">
-              I'm a <span id="age-display" class="tabular-nums font-mono">0.000000000</span> year old programmer and engineering enthusiast with a passion for creating and learning.
-            </p>
-            <div class="flex flex-wrap gap-4 mt-6">
-              <a class="neo-btn neo-btn-warning text-lg" href="/contact">Contact</a>
-              <a class="neo-btn neo-btn-error text-lg" href="mailto:almartdev@proton.me">Email</a>
-            </div>
-          </div>
-          <div>
-            <div class="m-4 profile-stack neo-card !p-0">
-              <img src="https://avatars.githubusercontent.com/u/92647999?v=4" alt="Profile Picture" class="profile-image rounded-lg" />
-              <div class="neo-card profile-balloon">
-                <p class="text-base font-bold title-font">My Local Time:</p>
-                <div class="text-lg mt-2 font-bold" id="time-display"></div>
-              </div>
-            </div>
-          </div>
+      <section class="music-card" aria-labelledby="music-title">
+        <div class="music-art">
+          <a
+            class="music-art-link"
+            href="https://open.spotify.com/track/45DElIx0dXqUH4A88yQFdE"
+            aria-label="Listen to Go With The Flow on Spotify"
+          >
+            <img src="assets/cover.png" alt="Pink pixel-art cloud cover" />
+          </a>
+        </div>
+        <div class="music-copy">
+          <h2 id="music-title">
+            <a class="music-title-link" href="https://open.spotify.com/track/45DElIx0dXqUH4A88yQFdE">Go With The Flow</a>
+          </h2>
+          <p class="music-subtitle">Queens Of The Stone Age</p>
+          <p class="music-prompt">Listen to this while I add the portfolio section</p>
         </div>
       </section>
-
-      <div class="mt-20 mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-3">
-        <h2 id="projects" class="text-5xl md:text-6xl title-font tracking-widest drop-shadow-[4px_4px_0px_rgba(0,0,0,0.2)]">Projects</h2>
-        <p class="text-xl font-bold opacity-60">More on <a href="https://github.com/aloyak?tab=repositories" class="underline hover:text-[#ff7b9f] transition-colors">GitHub</a>.</p>
-      </div>
-
-      <article class="project-entry neo-card bg-[#ffb84d] text-black mb-8">
-        <div class="project-watermark">01</div>
-        <header class="project-entry-header">
-          <div>
-            <span class="project-number">#01 — Featured</span>
-            <h3 class="project-entry-title mt-1">The SK<br>Programming<br>Language</h3>
-          </div>
-          <div class="flex flex-wrap gap-2 items-start mt-4 md:mt-0 md:justify-end">
-            <span class="tech-tag tech-tag-dark">Rust</span>
-            <span class="tech-tag tech-tag-dark">Interpreter</span>
-            <span class="tech-tag tech-tag-dark">CLI</span>
-            <span class="tech-tag tech-tag-dark">crates.io</span>
-          </div>
-        </header>
-        <div class="project-divider"></div>
-        <div class="project-entry-body">
-          <div class="project-entry-info">
-            <p class="text-xl font-bold leading-relaxed">
-              SK is a high-level interpreted language built to handle incomplete, approximate, or partially known information seamlessly. Completely written in Rust for safety and speed.
-            </p>
-            <p class="text-xl font-bold leading-relaxed mt-5">
-              Designed to be simple and intuitive — functions, loops, conditionals, fuzzy ranges, and much more. All out of the box.
-            </p>
-            <div class="flex flex-wrap gap-3 mt-8">
-              <a class="neo-btn bg-white text-lg" href="https://sk.aloyak.dev">View Project</a>
-              <a class="neo-btn neo-btn-info text-lg" href="https://crates.io/crates/sk-lang">Crates.io</a>
-              <a class="neo-btn bg-white text-lg" href="https://sk.aloyak.dev/docs">Docs</a>
-              <a class="neo-btn bg-white text-lg" href="https://github.com/aloyak/SK">GitHub</a>
-            </div>
-          </div>
-          <div class="project-entry-visual">
-            <div class="neo-card bg-white !p-0 overflow-hidden border-black relative">
-              <button class="absolute top-2 right-2 neo-btn neo-btn-success text-sm z-10" onclick="window.location.href='https://sk.aloyak.dev/ide?code64=aW1wb3J0IHRpbWUNCg0KZm4gdGVtcChiYXNlID0gMCkgew0KICAgIGxldCB0ZW1wZXJhdHVyZSA9IFsxNy4uMjNdIC8vIG5vaXN5IHNlbnNvcg0KICAgIHByaW50KCJUZW1wZXJhdHVyZSBpcyIsIHRlbXBlcmF0dXJlICsgYmFzZSkNCn0NCg0KZm9yIGRheSBpbiBbIk1vbmRheSIsICJUdWVzZGF5IiwgIldlZG5lc2RheSJdIHsNCiAgICBwcmludCgiVG9kYXkgaXMiLCBkYXkpDQogICAgcHJpbnQoIlRpbWUiLCB0aW1lLmZvcm1hdCh0aW1lLm5vdygpKSkNCiAgICB0ZW1wKDMpDQp9'">▶ Try It!</button>
-              <pre class="p-0 overflow-x-auto"><code class="language-rust hljs">import time
-
-fn temp(base = 0) {
-    let temperature = [17..23]
-    print("Temperature is", temperature + base)
-}
-
-for day in ["Monday", "Tuesday", "Wednesday"] {
-    print("Today is", day)
-    print("Time", time.format(time.now()))
-    temp(3)
-}</code></pre>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-entry project-entry-reverse neo-card bg-[#7da5ff] text-black mb-8">
-        <div class="project-watermark">02</div>
-        <header class="project-entry-header">
-          <div>
-            <span class="project-number">#02 — Featured</span>
-            <h3 class="project-entry-title mt-1">Origin Engine</h3>
-          </div>
-          <div class="flex flex-wrap gap-2 items-start mt-4 md:mt-0 md:justify-end">
-            <span class="tech-tag tech-tag-dark">C++20</span>
-            <span class="tech-tag tech-tag-dark">OpenGL</span>
-            <span class="tech-tag tech-tag-dark">SDL2</span>
-            <span class="tech-tag tech-tag-dark">ImGui</span>
-            <span class="tech-tag tech-tag-dark">CMake</span>
-          </div>
-        </header>
-        <div class="project-divider"></div>
-        <div class="project-entry-body">
-          <div class="project-entry-visual">
-            <div class="neo-card bg-white !p-0 overflow-hidden border-black mb-4">
-              <img src="https://raw.githubusercontent.com/aloyak/origin/master/assets/demo.png" alt="Origin Engine Demo" class="w-full h-auto block" />
-            </div>
-            <div class="neo-card bg-white !p-0 overflow-hidden border-black">
-              <img src="https://raw.githubusercontent.com/aloyak/origin/master/assets/sandbox.png" alt="Origin Engine Sandbox" class="w-full h-auto block" />
-            </div>
-          </div>
-          <div class="project-entry-info">
-            <p class="text-xl font-bold leading-relaxed">
-              A cross-platform true-3D-pixelart game engine built in C++20 with OpenGL and SDL2. Includes a custom sandbox editor built with ImGui for creating and editing scenes visually.
-            </p>
-            <p class="text-xl font-bold leading-relaxed mt-5">
-              Features dynamic lighting, an entity-component system with JSON scene serialization, basic physics and collisions (Bullet3), an Audio System (SoLoud) and a clean developer-friendly API.
-            </p>
-            <p class="text-xl font-bold leading-relaxed mt-5">
-              This engine combines many different technologies and concepts I've been interested in, and it's been a great learning experience building it from scratch.
-            </p>
-            <div class="flex flex-wrap gap-3 mt-8">
-              <a class="neo-btn bg-white text-lg" href="https://origin.aloyak.dev">View Project</a>
-              <a class="neo-btn neo-btn-error text-lg" href="https://origin.aloyak.dev/game">Try Demo!</a>
-              <a class="neo-btn bg-white text-lg" href="https://github.com/aloyak/origin">GitHub</a>
-              <a class="neo-btn neo-btn-warning text-lg" href="https://dylanebert.com/texel-splatting">Inspiration</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="neo-card bg-[#ff7b9f] text-black flex flex-col justify-between">
-          <div>
-            <span class="project-number">#03</span>
-            <h3 class="text-3xl title-font tracking-wide mt-2 leading-tight">This Website!</h3>
-            <p class="text-lg font-bold leading-relaxed mt-4">
-              A fast static personal site built with Neobrutalism, Tailwind, and vanilla JS. No frameworks, no build step.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-5">
-              <span class="tech-tag tech-tag-dark">HTML</span>
-              <span class="tech-tag tech-tag-dark">CSS</span>
-              <span class="tech-tag tech-tag-dark">Tailwind</span>
-              <span class="tech-tag tech-tag-dark">JS</span>
-            </div>
-          </div>
-          <div class="mt-8">
-            <a class="neo-btn bg-white w-full text-center text-lg" href="https://github.com/aloyak/aloyak.github.io">GitHub</a>
-          </div>
-        </div>
-
-        <div class="neo-card bg-[#c87bff] text-black flex flex-col justify-between">
-          <div>
-            <span class="project-number">#04</span>
-            <h3 class="text-3xl title-font tracking-wide mt-2 leading-tight">Steam Gacha</h3>
-            <p class="text-lg font-bold leading-relaxed mt-4">
-              A card game based on Steam games — find, trade, and combine cards. Inspired by wikigacha and Balatro!
-            </p>
-            <div class="flex flex-wrap gap-2 mt-5">
-              <span class="tech-tag tech-tag-dark">JavaScript</span>
-              <span class="tech-tag tech-tag-dark">HTML</span>
-              <span class="tech-tag tech-tag-dark">Steam API</span>
-            </div>
-          </div>
-          <div class="mt-8 flex flex-col gap-3">
-            <a class="neo-btn bg-white w-full text-center text-lg" href="https://steamgacha.aloyak.dev/">View Project</a>
-            <a class="neo-btn bg-white w-full text-center text-lg" href="https://github.com/aloyak/SteamGacha">GitHub</a>
-          </div>
-        </div>
-
-        <div class="neo-card bg-[#ff9d7b] text-black flex flex-col justify-between">
-          <div>
-            <span class="project-number">#05</span>
-            <h3 class="text-3xl title-font tracking-wide mt-2 leading-tight">ReadCoach</h3>
-            <div class="neo-card bg-white !p-0 border-black overflow-hidden mt-4">
-              <img src="https://raw.githubusercontent.com/aloyak/ReadCoach/main/preview.png" alt="ReadCoach Preview" class="w-full h-auto block" />
-            </div>
-            <p class="text-lg font-bold leading-relaxed mt-4">
-              An RSVP speed-reading tool that shows one word at a time in rapid sequence. A fun way to train reading speed and focus.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-5">
-              <span class="tech-tag tech-tag-dark">JavaScript</span>
-              <span class="tech-tag tech-tag-dark">HTML</span>
-              <span class="tech-tag tech-tag-dark">CSS</span>
-            </div>
-          </div>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a class="neo-btn bg-white text-lg" href="https://readcoach.aloyak.dev">View Project</a>
-            <a class="neo-btn bg-white text-lg" href="https://github.com/aloyak/ReadCoach">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <h2 id="github" class="mt-20 mb-6 text-5xl md:text-6xl title-font tracking-widest drop-shadow-[4px_4px_0px_rgba(0,0,0,0.2)]">GitHub</h2>
-
-      <div class="grid grid-cols-3 gap-4 mb-6">
-        <div class="neo-card !py-6 text-center flex flex-col items-center gap-2">
-          <span id="gh-repos" class="text-4xl md:text-5xl title-font gh-stat-value">—</span>
-          <span class="text-sm md:text-base font-bold opacity-55 tracking-widest uppercase">Public Repos</span>
-        </div>
-        <div class="neo-card !py-6 text-center flex flex-col items-center gap-2">
-          <span id="gh-stars" class="text-4xl md:text-5xl title-font gh-stat-value">—</span>
-          <span class="text-sm md:text-base font-bold opacity-55 tracking-widest uppercase">Total Stars</span>
-        </div>
-        <div class="neo-card !py-6 text-center flex flex-col items-center gap-2">
-          <span id="gh-followers" class="text-4xl md:text-5xl title-font gh-stat-value">—</span>
-          <span class="text-sm md:text-base font-bold opacity-55 tracking-widest uppercase">Followers</span>
-        </div>
-      </div>
-
-      <div class="neo-card">
-        <div class="flex items-center justify-between flex-wrap gap-2">
-          <h3 class="text-2xl md:text-3xl title-font tracking-wide">Contributions</h3>
-          <a class="text-lg font-bold underline hover:text-[#7da5ff] transition-colors" href="https://github.com/aloyak">github.com/aloyak</a>
-        </div>
-        <div id="contributions-chart" class="mt-4"></div>
-        <div class="flex items-center gap-2 mt-4 justify-end">
-          <span class="text-sm font-bold opacity-50">Less</span>
-          <span class="contrib-legend-cell level-0"></span>
-          <span class="contrib-legend-cell level-1"></span>
-          <span class="contrib-legend-cell level-2"></span>
-          <span class="contrib-legend-cell level-3"></span>
-          <span class="contrib-legend-cell level-4"></span>
-          <span class="text-sm font-bold opacity-50">More</span>
-        </div>
-      </div>
-
-      <h2 id="about" class="mt-20 mb-8 text-5xl md:text-6xl title-font tracking-widest drop-shadow-[4px_4px_0px_rgba(0,0,0,0.2)]">About Me</h2>
-
-      <div class="neo-card relative mt-12">
-        <h2 class="section-label bg-[#7da5ff]">About</h2>
-        <p class="mt-8 text-xl font-bold leading-relaxed">
-          Hey There! I'm 4loyak! (@aloyak),<br><br>
-          I enjoy moving around from low-level to high-level technologies and combining them in interesting ways. All while listening to Foo Fighters and Queens of the Stone Age.<br><br>
-          I'm completely self-taught, which may be reflected in the 'interesting' way I sometimes write code.<br><br>
-          Apart from tech, I also enjoy sports (all of them) and esports as well as languages (human ones) while I dislike Microslop.<br><br>
-          Based in Spain.
-        </p>
-        <p class="mt-8 text-xl font-bold leading-relaxed bg-[#ECEBDE] p-6 border-4 border-black rounded-xl text-black">
-          > I'm always open for conversation and I actually pay attention to my email. So feel free to reach out!
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6 mt-8">
-        <div class="neo-card">
-          <h3 class="text-2xl md:text-3xl title-font mb-6">My Favourite Languages</h3>
-          <ul class="list-disc list-inside font-bold space-y-3 mb-10 ml-2 text-xl">
-            <li>C (and sometimes C++)</li>
-            <li>Rust</li>
-            <li>Python</li>
-          </ul>
-          <h3 class="text-2xl md:text-3xl title-font mb-6">Some tools I use</h3>
-          <ul class="list-disc list-inside font-bold space-y-3 mb-8 ml-2 text-xl">
-            <li>Git</li>
-            <li>Blender</li>
-            <li>CMake & Premake</li>
-            <li>Unity Engine</li>
-          </ul>
-          <p class="text-xl font-bold border-t-4 border-black pt-6">I use different code editors but mostly VSCode, even though I like Neovim.</p>
-        </div>
-
-        <div class="neo-card">
-          <h3 class="text-2xl md:text-3xl title-font mb-2">Favourite Songs</h3>
-          <p class="text-base font-bold mb-8 opacity-70">Last updated: 04/2026</p>
-          <div class="overflow-x-auto">
-            <table class="neo-table">
-              <tbody>
-                <tr>
-                  <td class="w-32 !p-0 border-r-4 border-black">
-                    <img class="w-full h-auto block" src="https://lastfm.freetls.fastly.net/i/u/300x300/afe86503b879103e691238914c622359.jpg" alt="Songs for the Deaf">
-                  </td>
-                  <td class="font-bold p-6 text-xl">
-                    <a href="https://open.spotify.com/track/6Oqjnu8tcb96YyvEVm670m" class="hover:underline">1. Go With The Flow</a>
-                    <p class="text-base mt-2 opacity-80">(Queens of The Stone Age)</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="w-32 !p-0 border-r-4 border-black">
-                    <img class="w-full h-auto block" src="https://lastfm.freetls.fastly.net/i/u/300x300/a260d84c68f041289196b054238e55e0.jpg" alt="Them Crooked Vultures">
-                  </td>
-                  <td class="font-bold p-6 text-xl">
-                    <a href="https://open.spotify.com/track/4Mxef2s34ecbB6UtSdSf9E" class="hover:underline">2. No One Loves Me & Neither Do I</a>
-                    <p class="text-base mt-2 opacity-80">(Them Crooked Vultures)</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="w-32 !p-0 border-r-4 border-black">
-                    <img class="w-full h-auto block" src="https://lastfm.freetls.fastly.net/i/u/300x300/1715e24c2957f8646b528b348981f95d.jpg" alt="Red Bellied Black Snake">
-                  </td>
-                  <td class="font-bold p-6 text-xl">
-                    <a href="https://open.spotify.com/track/6CjeXQnmTjcxmiTQISW9Qu" class="hover:underline">3. Red Bellied Black Snake</a>
-                    <p class="text-base mt-2 opacity-80">(The Beefs)</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div class="neo-card relative mt-16">
-        <h2 class="section-label bg-[#ff7b9f]">Hack Club</h2>
-        <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hackclub Logo" class="h-48 md:absolute md:top-0 md:right-10 mt-10 md:mt-0" />
-        <div class="mt-10 font-bold leading-relaxed text-xl">
-          <p>Proud member of Hack Club!</p>
-          <br><br>
-        </div>
-      </div>
-
-      <footer class="my-20 text-lg font-bold text-center opacity-80">
-        <p>© 2026 @aloyak</p>
-      </footer>
     </main>
-
-    <script>
-      const birthDate = new Date("2008-10-01T00:00:00");
-      function updateAge() {
-        const age = (new Date() - birthDate) / 31556952000;
-        document.getElementById("age-display").innerText = age.toFixed(9);
-      }
-      setInterval(updateAge, 50);
-    </script>
-    <script>
-      hljs.highlightAll();
-      const observer = new MutationObserver(() => {
-        document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el));
-      });
-      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    </script>
   </body>
 </html>

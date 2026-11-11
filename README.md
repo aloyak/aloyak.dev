@@ -1,5 +1,9 @@
-# 4loyak! Personal Website
+# 4loyak personal website
 
-This is my personal website
+A small static personal site built with HTML and CSS.
 
-It uses `nes-css` and tailwind to create a nice retro 8-bit look
+Run it locally with:
+
+```bash
+python3 -m http.server 8000
+```
